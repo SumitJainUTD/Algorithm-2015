@@ -11,7 +11,7 @@ public class ReverseString {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String a = "sumit jain";
+		String a = "Sumit";
 		ReverseString i = new ReverseString();
 		System.out.println(i.reverse(a));
 
