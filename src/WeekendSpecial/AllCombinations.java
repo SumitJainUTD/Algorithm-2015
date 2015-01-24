@@ -2,7 +2,7 @@ package WeekendSpecial;
 
 public class AllCombinations {
 
-	static int  [] B = {1,2,3} ;
+	static int  [] B = {3,2,6} ;
 	public void combinations(int[] A, int x) {
 		if (x == A.length-1) {
 			A[x]=0;
