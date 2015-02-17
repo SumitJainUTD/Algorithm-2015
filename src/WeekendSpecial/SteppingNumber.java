@@ -9,12 +9,12 @@ public class SteppingNumber {
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		for(int i = start;i<=end;i++)
 		{
-			if(check(i))
+			if(checkStep(i))
 				result.add(i);
 		}
 		System.out.print(result);
 	}
-	public static boolean check(int i)
+	public static boolean checkStep(int i)
 	{
 		ArrayList<Integer> a = new ArrayList<Integer>();
 		while(i/10>=1)
@@ -30,7 +30,7 @@ public class SteppingNumber {
 				continue;
 			else
 				return false;
-		}
+		}		
 		return true;
 		
 	}

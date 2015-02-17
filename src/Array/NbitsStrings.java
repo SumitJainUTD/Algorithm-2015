@@ -3,25 +3,26 @@ package Array;
 import java.util.Arrays;
 
 public class NbitsStrings {
-	int [] arrA;
-	public NbitsStrings(int n){
-		arrA = new int [n];
+	int[] arrA;
+
+	public NbitsStrings(int n) {
+		arrA = new int[n];
 	}
-	public void nBits(int n){
-		if(n<=0){
+
+	public void nBits(int n) {
+		if (n <= 0) {
 			System.out.println(Arrays.toString(arrA));
-		}else{
-			arrA[n-1 ]=0;
-			nBits(n-1);
-			arrA[n-1]=1;
-			nBits(n-1);
+		} else {
+			arrA[n - 1] = 0;
+			nBits(n - 1);
+			arrA[n - 1] = 1;
+			nBits(n - 1);
 		}
 	}
 
 	public static void main(String[] args) throws java.lang.Exception {
-		int n = 4;
+		int n = 3;
 		NbitsStrings i = new NbitsStrings(n);
-		// A, B, C - A is source, B is destination and C is Auxiliary Nail
 		i.nBits(n);
 	}
 }

@@ -32,7 +32,7 @@ public class SmallestRangeInKList {
 		while (count < nk) {
 			HeapNode h = extractMin(); // get the min node from the heap.
 			int min = h.data; // store node data into result array
-			if (range > currMax - min) { // check is current difference > range
+			if (range > currMax - min) { // check if current difference > range
 				gMin = min;
 				gMax = currMax;
 				range = gMax - gMin;

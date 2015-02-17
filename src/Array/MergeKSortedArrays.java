@@ -126,6 +126,7 @@ public class MergeKSortedArrays {
 
 }
 
+// Every Node will store the data and the list no from which it belongs
 class HeapNode {
 	int data;
 	int listNo;

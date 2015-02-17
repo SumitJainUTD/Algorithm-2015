@@ -32,7 +32,7 @@ public class PhoneNos {
 	
 	public static void main(String[] args) {
 		n1=2;n2=3;n3=5;
-	    int len=9;
+	    int len=3;
 	    int A[] = new int [len];
 	    generate(A,0,len);
 	    

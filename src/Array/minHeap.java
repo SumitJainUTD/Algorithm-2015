@@ -60,7 +60,7 @@ public class minHeap {
 	public void sinkDown(int k) {
 		int a = mH[k];
 		int smallest = k;
-		//check which is smaller child , 2k or 2k+1.  
+		// check which is smaller child , 2k or 2k+1.
 		if (2 * k < position && mH[smallest] > mH[2 * k]) {
 			smallest = 2 * k;
 		}
@@ -80,17 +80,18 @@ public class minHeap {
 		mH[a] = mH[b];
 		mH[b] = temp;
 	}
-	//function to delete any entry in heap
-	public void delete(int x){
-		//find it and replace it with the last entry in Heap
+
+	// function to delete any entry in heap
+	public void delete(int x) {
+		// find it and replace it with the last entry in Heap
 		int index = 0;
-		for(int i=1;i<mH.length;i++){
-			if(mH[i]==x){
+		for (int i = 1; i < mH.length; i++) {
+			if (mH[i] == x) {
 				index = i;
 				break;
 			}
 		}
-		mH[index] = mH[position-1];
+		mH[index] = mH[position - 1];
 		mH[position - 1] = 0; // set the last element as 0
 		position--;
 		sinkDown(index);
@@ -106,11 +107,6 @@ public class minHeap {
 		System.out.print("\nMin-Heap : ");
 		m.createHeap(arrA);
 		m.display();
-//		System.out.print("Extract Min : " + m.extractMin());
-//		for (int i = 0; i < arrA.length; i++) {
-//			System.out.print("  " + m.extractMin());
-//		}
-		
 		m.delete(7);
 		m.display();
 

@@ -3,7 +3,7 @@ package WeekendSpecial;
 public class AllSubSetOfSizeK {
 
 	public void subset(int[] A, int k, int start, int currLen, boolean[] used) {
-		
+
 		if (currLen == k) {
 			for (int i = 0; i < A.length; i++) {
 				if (used[i] == true) {
@@ -13,7 +13,7 @@ public class AllSubSetOfSizeK {
 			System.out.println();
 			return;
 		}
-		if(start==A.length){ 
+		if (start == A.length) {
 			return;
 		}
 		// For every index we have two options,
@@ -27,7 +27,7 @@ public class AllSubSetOfSizeK {
 	}
 
 	public static void main(String[] args) {
-		int A[] = { 1, 2, 3, 4,5};
+		int A[] = { 1, 2, 3, 4, 5 };
 		boolean[] B = new boolean[A.length];
 		AllSubSetOfSizeK i = new AllSubSetOfSizeK();
 		i.subset(A, 3, 0, 0, B);

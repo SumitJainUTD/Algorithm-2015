@@ -31,7 +31,7 @@ public class DecimalOctalPalindrome {
 			if (isPalindrome(decimal)) {
 				String Oct = DecimalToOctal(i);
 				if (isPalindrome(Oct)) {
-					System.out.print(i + "  ");
+					System.out.print(Oct + "  ");
 				}
 			}
 		}

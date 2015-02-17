@@ -9,7 +9,7 @@ public class BottomViewOfTree {
 	public Node BottomView(Node root, int level) {
 		if (root == null)
 			return null;
-		ht.put(level, root.data);
+		ht.put(level, root.data); // keep updating the recently visited node.
 
 		Node x = BottomView(root.left, --level);
 		if (x == null) {
@@ -18,10 +18,10 @@ public class BottomViewOfTree {
 		return BottomView(root.right, ++level);
 	}
 
-	public void display() {
+	public void display() {   // print the bottom view.
 		Set<Integer> keys = ht.keySet();
 		for (Integer key : keys) {
-			System.out.println("Value of " + key + " is: " + ht.get(key));
+			System.out.print(ht.get(key) + " ");
 		}
 
 	}
@@ -34,7 +34,7 @@ public class BottomViewOfTree {
 		root.left.left.left = new Node(8);
 		root.left.left.right = new Node(9);
 		root.left.right = new Node(5);
-		root.right.left = new Node(6);
+		// root.right.left = new Node(6);
 		root.right.right = new Node(7);
 
 		BottomViewOfTree p = new BottomViewOfTree();

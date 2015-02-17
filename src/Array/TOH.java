@@ -21,7 +21,7 @@ public class TOH {
 	{
 		int n = 4;
 		TOH i = new TOH();
-		//A, B, C - A is source, B is destination and C is Auxiliary Nail
+		//A, B, C -> A is source, B is destination and C is Auxiliary Nail
 		i.Tower(n,"A","C","B");
 	}
 }

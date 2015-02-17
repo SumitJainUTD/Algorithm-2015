@@ -3,7 +3,7 @@ package Array;
 import java.util.Arrays;
 
 public class IncreasingTripletSubsequence {
-	//Find a sorted subsequence of size 3 in linear time
+	// Find a sorted subsequence of size 3 in linear time
 	// Given an integer array A[1..n], find an instance of i,j,k where 0 < i < j
 	// < k <= n and A[i] < A[j] < A[k].
 	public void triplet(int[] arrA) {
@@ -23,7 +23,7 @@ public class IncreasingTripletSubsequence {
 			}
 			Lmin[i] = leftMinIndex;
 		}
-//		System.out.println(Arrays.toString(Lmin));
+		// System.out.println(Arrays.toString(Lmin));
 		// traverse the main array backwords and fill the Rmax array with the
 		// index position which has the maximun value so far
 		for (int i = arrA.length - 1; i >= 0; i--) {
@@ -33,7 +33,10 @@ public class IncreasingTripletSubsequence {
 			}
 			Rmax[i] = rightMaxIndex;
 		}
-//		System.out.println(Arrays.toString(Rmax));
+		// Now Traverse the main array and check for the element with the
+		// following condition and print it.
+		// arrA[Lmin[i]] < arrA[i] && arrA[Rmax[i]] > arrA[i]
+
 		for (int i = 0; i < arrA.length; i++) {
 			if (arrA[Lmin[i]] < arrA[i] && arrA[Rmax[i]] > arrA[i]) {
 				System.out.println("Triplet " + arrA[Lmin[i]] + "  " + arrA[i]
@@ -44,10 +47,9 @@ public class IncreasingTripletSubsequence {
 	}
 
 	public static void main(String[] args) {
-		int arrA[] = {10,9,4,3,2,1,7,3,1,11,2,6,9};
+		int arrA[] = { 10, 9, 4, 3, 2, 1, 7, 3, 1, 11, 2, 6, 9 };
 		IncreasingTripletSubsequence i = new IncreasingTripletSubsequence();
 		i.triplet(arrA);
-		
 
 	}
 

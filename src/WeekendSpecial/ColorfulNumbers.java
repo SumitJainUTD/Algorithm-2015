@@ -16,7 +16,7 @@ public class ColorfulNumbers {
 //	Appraoch
 	// insert all the digits into hast table
 	//create a powerset except empty set
-	//multiply all the digits in the individual powerset.
+	//multiply all the digits in the individual powerset and insert into Hash Table.
 	// if any point, number already present in the Hash table, return false
 	Hashtable<Integer, Integer> ht = new Hashtable<>();
 	boolean [] used; // for creating powerset, every digit, either it will be selected or not
