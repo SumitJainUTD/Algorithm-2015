@@ -39,7 +39,7 @@ public class LeftSumTree {
 //		root.left.left.right.left.left.right = new Node(12);
 
 		LeftSumTree dp = new LeftSumTree();
-//		dp.leftSTree(root);
+		dp.leftSTree(root, true);
 
 	}
 }

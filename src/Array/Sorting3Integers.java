@@ -1,5 +1,5 @@
 package Array;
-
+//YES
 public class Sorting3Integers {
 
 	// sort 3 given integers, sort them with out using if conditions

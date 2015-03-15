@@ -29,19 +29,13 @@ public class DeepestLeftLeaf {
 		root.right = new Node(3);
 		root.left.left = new Node(4);
 		root.left.right = new Node(5);
-		root.right.left = new Node(6);
-		root.right.right = new Node(7);
-		root.left.right.left = new Node(9);
 		root.left.left.right = new Node(8);
-		root.left.left.right.left = new Node(10);
-		root.left.left.right.left.left = new Node(11);
-
+		
 		DeepestLeftLeaf dp = new DeepestLeftLeaf();
-		System.out.println("Deapest Left chils is: " + dp.deepLeft(root));
+		System.out.println("Deapest Left child is: " + dp.deepLeft(root));
 
 	}
 }
-
 class Node {
 	int data;
 	Node left;

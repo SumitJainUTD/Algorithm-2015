@@ -1,6 +1,7 @@
 package Array;
 
 public class Fibonacchi {
+	
 	public int fibRecur(int x) {
 		if (x == 0)
 			return 0;
@@ -22,6 +23,18 @@ public class Fibonacchi {
 		}
 		return fib[x];
 	}
+	int n=5;
+	int fib[] = new int[n];
+	public int fibTopDown(int n) {		
+		if(n==0) return 1;
+		if(n==1) return 1;
+		if(fib[n]!=0){
+			return fib[n]; 
+		}else{
+			fib[n] = fibTopDown(n-1) + fibTopDown(n-2);
+			return fib[n];
+		}
+	}
 
 	public static void main(String args[]) {
 		int x = 6;
@@ -32,6 +45,7 @@ public class Fibonacchi {
 		System.out.println(x + "th fibonachi Number is(Recursion) "
 				+ i.fibRecur(x));
 		System.out.println(x + "th fibonachi Number is (DP) " + i.fibDP(x));
+		System.out.println(x + "th fibonachi Number is (DP Top Down) " + i.fibTopDown(5));
 
 	}
 }
