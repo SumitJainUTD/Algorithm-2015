@@ -57,7 +57,7 @@ public class MinCoinChange {
 
 	public static void main(String[] args) {
 		int[] coins = { 1, 2, 3 };
-		int amount = 20;
+		int amount = 12;
 		MinCoinChange m = new MinCoinChange();
 		System.out.println("(Recursion) Minimum Coins required to make change for "
 				+ amount + " are: " + m.minCoinsRecur(amount, coins));

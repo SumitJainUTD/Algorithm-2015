@@ -42,6 +42,7 @@ public class SUDOKU {
 		}
 		return false;
 	}
+
 	// check if n not in particular row
 	public boolean UsedInRow(int row, int n) {
 		for (int i = 0; i < 9; i++) {
@@ -51,8 +52,9 @@ public class SUDOKU {
 		}
 		return false;
 	}
+
 	// check if n not in particular column
-	public boolean UsedInColumn(int col, int n) { 
+	public boolean UsedInColumn(int col, int n) {
 		for (int i = 0; i < 9; i++) {
 			if (grid[i][col] == n) {
 				return true;
@@ -60,6 +62,7 @@ public class SUDOKU {
 		}
 		return false;
 	}
+
 	// check if n not in particular box
 	public boolean UsedInBox(int boxStartRow, int boxStartCol, int n) {
 		for (int i = 0; i < 3; i++) {
@@ -90,26 +93,26 @@ public class SUDOKU {
 
 	public void print() {
 		for (int row = 0; row < 9; row++) {
-			if(row % 3==0){
-				System.out.println();  // for more readability
+			if (row % 3 == 0) {
+				System.out.println(); // for more readability
 			}
 			for (int col = 0; col < 9; col++) {
 				if (col % 3 == 0) {
 					System.out.print(" "); // for more readability
 				}
 				System.out.print(grid[row][col] + " ");
-				
+
 			}
 			System.out.println();
 		}
 	}
 
 	public static void main(String[] args) {
-		grid = new int[][] { { 3, 0, 6, 5, 0, 8, 4, 0, 0 },
-				{ 5, 2, 0, 0, 0, 0, 0, 0, 0 }, { 0, 8, 7, 0, 0, 0, 0, 3, 1 },
-				{ 0, 0, 3, 0, 1, 0, 0, 8, 0 }, { 9, 0, 0, 8, 6, 3, 0, 0, 5 },
-				{ 0, 5, 0, 0, 9, 0, 6, 0, 0 }, { 1, 3, 0, 0, 0, 0, 2, 5, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0, 7, 4 }, { 0, 0, 5, 2, 0, 6, 3, 0, 0 } };
+		grid = new int[][] { { 5, 3, 0, 0, 7, 0, 0, 0, 0 },
+				{ 6, 0, 0, 1, 9, 5, 0, 0, 0 }, { 0, 9, 8, 0, 0, 0, 0, 6, 0 },
+				{ 8, 0, 0, 0, 6, 0, 0, 0, 3 }, { 4, 0, 0, 8, 0, 3, 0, 0, 1 },
+				{ 7, 0, 0, 0, 2, 0, 0, 0, 6 }, { 0, 6, 0, 0, 0, 0, 2, 8, 0 },
+				{ 0, 0, 0, 4, 1, 9, 0, 0, 5 }, { 0, 0, 0, 0, 8, 0, 0, 7, 9 } };
 		SUDOKU s = new SUDOKU();
 		if (s.solveSUDOKU()) {
 			s.print();

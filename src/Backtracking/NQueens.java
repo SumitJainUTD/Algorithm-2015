@@ -1,4 +1,4 @@
-package FEB;
+package Backtracking;
 
 import java.util.Arrays;
 
@@ -24,7 +24,6 @@ public class NQueens {
 		}
 		return true;
 	}
-
 	public void placeQueens(int x, int size) {
 		for (int i = 0; i < size; i++) {
 			//check if queen at xth row can be placed at i-th column.
@@ -38,12 +37,10 @@ public class NQueens {
 			}
 		}
 	}
-
 	public static void main(String[] args) {
-		int n = 4;
+		int n = 6;
 		result = new int[n];
 		NQueens i = new NQueens();
 		i.placeQueens(0, n);
 	}
-
 }
