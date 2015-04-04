@@ -30,7 +30,7 @@ public class LongestString {
 		LongestString i = new LongestString();
 		System.out.println(i.find(s.toCharArray()));
 		
-		System.out.println('a'+1);
+		
 
 	}
 
