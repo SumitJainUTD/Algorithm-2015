@@ -18,11 +18,6 @@ public class GraphBFS {
 		g.addEdge(4, 1);
 		g.BFS(0);
 		
-//		Node head = g.array[4].head;
-//		while(head!=null){
-//			System.out.println(head.src + "  " + head.dest);
-//			head = head.next;
-//		}
 	}
 }
 

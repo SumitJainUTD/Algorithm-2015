@@ -27,10 +27,10 @@ public class AllSubSetOfSizeK {
 	}
 
 	public static void main(String[] args) {
-		int A[] = { 1, 2, 3, 4, 5 };
+		int A[] = { 1, 2, 3, 4 };
 		boolean[] B = new boolean[A.length];
 		AllSubSetOfSizeK i = new AllSubSetOfSizeK();
-		i.subset(A, 3, 0, 0, B);
+		i.subset(A, 2, 0, 0, B);
 
 	}
 
