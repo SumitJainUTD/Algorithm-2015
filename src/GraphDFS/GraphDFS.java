@@ -15,9 +15,7 @@ public class GraphDFS {
 		g.addEdge(2, 3);
 		g.addEdge(4, 0);
 		g.addEdge(4, 1);
-		g.printGraph();
 		g.DFS(0);
-
 	}
 
 }
@@ -41,20 +39,7 @@ class Graph{
 		//add the node to the Linked List for that particular source
 		n.next = list[source].head;
 		list[source].head = n;		
-	}
-	public void printGraph(){
-		for(int i=0;i<V;i++){
-			Node head = list[i].head;
-			System.out.print("Vertex " + i + " is connected to :");			
-			while(head!=null){
-				System.out.print(" "+ head.destination);
-				head = head.next;
-			}
-			System.out.println();
-		}
-	}
-	
-	
+	}	
 	public void DFS(int startVertex){
 		Stack<Integer> s = new Stack<Integer>();
 		boolean [] visited = new boolean[V];		

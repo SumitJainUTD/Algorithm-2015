@@ -16,13 +16,14 @@ public class StepsPossiblePathsRecur {
 		if (dyn[n] > 0) {
 			return dyn[n];
 		}
-		return 1 + poosibleWaysDyna(n - 1, dyn) + poosibleWaysDyna(n - 2, dyn)
+		dyn[n]= 1 + poosibleWaysDyna(n - 1, dyn) + poosibleWaysDyna(n - 2, dyn)
 				+ poosibleWaysDyna(n - 3, dyn);
+		return dyn[n];
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n = 3;
+		int n = 5;
 		StepsPossiblePathsRecur s = new StepsPossiblePathsRecur();	
 		System.out.println(s.possibleWays(n));
 		int[] dyn = new int[n + 1];

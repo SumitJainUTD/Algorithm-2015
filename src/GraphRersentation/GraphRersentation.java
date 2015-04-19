@@ -10,7 +10,7 @@ public class GraphRersentation {
 		gph.addEdge(2, 4);
 		gph.printGraph(gph);
 	}
-}
+}	
 
 // Create adjacency node
 class adjNode {
@@ -18,7 +18,7 @@ class adjNode {
 	int destination;
 	adjNode next;
 
-	public adjNode(int source, int destination) {
+	public adjNode(int source, int destination) {	
 		this.source = source;
 		this.destination = destination;
 		next = null;
@@ -54,9 +54,9 @@ class Graph {
 		array[source].head = adn;
 
 		// now create a reverse edge since its a undirected graph
-		adn = new adjNode(destination, source);
-		adn.next = array[destination].head;
-		array[destination].head = adn;
+//		adn = new adjNode(source);
+//		adn.next = array[destination].head;
+//		array[destination].head = adn;
 	}
 
 	public void printGraph(Graph gph) {
@@ -64,12 +64,15 @@ class Graph {
 		adjNode ad;
 		for (int i = 0; i < vertex; i++) {
 			ad = gph.array[i].head;
-			System.out.println("\nNodes connected to Vertex " + ad.source
-					+ " are :");
-			while (ad != null) {
-				System.out.print("  " + ad.destination);
-				ad = ad.next;
+			if(ad!=null){
+				System.out.println("\nNodes connected to Vertex " + ad.source
+						+ " are :");
+				while (ad != null) {
+					System.out.print("  " + ad.destination);
+					ad = ad.next;
+				}
 			}
+			
 		}
 	}
-}
+}																

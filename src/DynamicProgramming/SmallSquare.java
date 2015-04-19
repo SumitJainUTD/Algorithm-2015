@@ -57,7 +57,7 @@ public class SmallSquare {
 	}
 
 	public static void main(String[] args) {
-		int N = 20;
+		int N = 12;
 		SmallSquare s = new SmallSquare();
 		s.solve(N);
 

@@ -2,8 +2,6 @@ package GraphBFS;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
-
 
 public class GraphBFS {
 	public static void main(String args[]) {
@@ -17,17 +15,15 @@ public class GraphBFS {
 		g.addEdge(4, 0);
 		g.addEdge(4, 1);
 		g.BFS(0);
-		
+
 	}
 }
 
 class Node {
-	int src;
 	int dest;
 	Node next;
 
-	public Node(int s, int d) {
-		src = s;
+	public Node(int d) {
 		dest = d;
 		next = null;
 	}
@@ -43,7 +39,7 @@ class Graph {
 
 	public Graph(int V) {
 		this.V = V;
-		array = new adjList[V];
+		array = new adjList[V]; // linked lists = number of Nodes in Graph
 
 		for (int i = 0; i < V; i++) {
 			array[i] = new adjList();
@@ -52,28 +48,28 @@ class Graph {
 	}
 
 	public void addEdge(int src, int dest) {
-		Node n = new Node(src, dest);
+		Node n = new Node(dest);
 		n.next = array[src].head;
 		array[src].head = n;
 	}
 
 	public void BFS(int startVertex) {
-		boolean [] visited = new boolean[V];
-		Queue<Integer> s = new LinkedList<Integer>();	
-		
+		boolean[] visited = new boolean[V];
+		Queue<Integer> s = new LinkedList<Integer>();
+
 		s.add(startVertex);
-		while(s.isEmpty()==false){
+		while (s.isEmpty() == false) {
 			int n = s.poll();
 			System.out.print(" " + n);
 			visited[n] = true;
 			Node head = array[n].head;
-			while(head!=null){				
-				if(visited[head.dest]==false){
+			while (head != null) {
+				if (visited[head.dest] == false) {
 					s.add(head.dest);
 					visited[head.dest] = true;
 				}
 				head = head.next;
 			}
 		}
-		}
 	}
+}

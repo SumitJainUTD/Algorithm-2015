@@ -11,7 +11,7 @@ public class ElucidGCD {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(findGCD(156, 282));
+		System.out.println(findGCD(10	, 75));
 	}
 
 }
